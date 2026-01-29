@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>주차장 경사로 단면 검토</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="controls">
+    <h2>주차장 경사로 단면 검토</h2>
+
+    <h3>계산 모드</h3>
+    <label><input type="radio" name="mode" value="mode1" checked> 모드1. 경사로 최소길이 검토</label>
+    <label><input type="radio" name="mode" value="mode2"> 모드2. 전체 길이 기준 설계</label>
+
+    <hr>
+
+    <label>층고 H (mm)
+      <input id="H" type="number" value="5000">
+    </label>
+
+    <label>전체 경사로 길이 L (mm)
+      <input id="L" type="number">
+    </label>
+
+    <hr>
+
+    <h3>완화구간 (오목형)</h3>
+    <label>길이 Lf (mm) <input id="Lf" type="number" value="2000"></label>
+    <label>높이 hf (mm) <input id="hf" type="number" value="160"></label>
+    <label>구배 Sf (%) <input id="Sf" type="number" value="8"></label>
+
+    <h3>일반경사구간</h3>
+    <label>구배 Sm (%) <input id="Sm" type="number" value="17"></label>
+
+    <h3>완화구간 (볼록형)</h3>
+    <label>길이 Lb (mm) <input id="Lb" type="number" value="2000"></label>
+    <label>높이 hb (mm) <input id="hb" type="number" value="160"></label>
+    <label>구배 Sb (%) <input id="Sb" type="number" value="8"></label>
+
+    <p id="status"></p>
+  </div>
+
+  <svg id="svg" viewBox="0 0 2000 650"></svg>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
